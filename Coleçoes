@@ -1,0 +1,20 @@
+# Lê a lista de números do usuário
+numeros = input("Digite uma lista de números inteiros separados por espaço: ").split()
+
+# Converte os números para inteiros
+numeros = [int(numero) for numero in numeros]
+
+# Inicializa as variáveis de maior e menor número com os primeiros elementos da lista
+maior_numero = numeros[0]
+menor_numero = numeros[0]
+
+# Percorre a lista e atualiza as variáveis de maior e menor número conforme necessário
+for numero in numeros:
+    if numero > maior_numero:
+        maior_numero = numero
+    if numero < menor_numero:
+        menor_numero = numero
+
+# Imprime o maior e o menor número da lista
+print("O maior número da lista é:", maior_numero)
+print("O menor número da lista é:", menor_numero)
